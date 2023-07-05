@@ -1,0 +1,51 @@
+
+                    E-Cart Server Creation
+                -----------------------------
+
+                1. create Package.Json - npm Init -y
+                2. Install some Library - npm i express cors mongoose dotenv
+                => dotenv - Environmant variables are used to store app secret and configuration
+                data which are retrieved by the running app when needed.
+
+                    Types :
+
+                    -> 1. System Environmant Variable
+                    -> 2. User Environment Variable
+                    -> 3. Runtime/Process variable (Application running Process) 
+
+                3. Create .env File
+                4. Create .gitignore
+                5. Add node_module and .env in .gitignore
+                6. Create index.j
+                7. In index.js file,
+                  =>import Express, cors, dotenv
+                   =>create an app using express
+                         =>use cors and express.json() in server app
+                         =>Define port number
+
+                         MONGODB ATLAS configuration
+                         ----------------------------
+                1 . copy connection string from atlas and paste it into .env file
+                2 . create a db folder in server , inside create a connecton.js
+                3 . in connection.js file import mongoose
+                4 . get db connection string from .env file
+                5 . use mondoose to connect mongodb with node.js
+                6 . import connection.js in index.js 
+                7 . create a model in server
+                8 . create a model/collection to store product in model folder
+                9 . export model
+                10. Create a router for client request - ccraete a routes folder inside it create a router
+                        => Inside router.js file, import express
+                        => Using express create an object for router class inorder to setup path
+                        => resolve client request in various server routes 
+
+                11. Create controller folder inorder to define logic to resolve client request
+                        =>Controller(folder)
+                            - productController.js
+                            - cartController.js
+                            - wishlistController.js
+
+                        => Inside productController
+                            - Import product collection
+                            - Define logic to resolve client request
+
